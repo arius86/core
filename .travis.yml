@@ -1,3 +1,7 @@
+language: php
+
+sudo: false
+
 php:
   - 5.4
   - 5.5
@@ -20,7 +24,7 @@ before_script:
   - php -r 'echo \Phalcon\Version::get()."\n";'
   - composer self-update
   - composer update
-  
+
 script:
   - cp tests/config.sample.php tests/config.php
   - mkdir -p tests/fixtures/cache
